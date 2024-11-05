@@ -301,3 +301,41 @@ h3 {
   /* text-decoration: none; */
   font-weight: bold;
 }
+
+.welcome-popup {
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  border: solid 2px #191919;
+  z-index: 1000;
+}
+
+.popup-footer {
+  font-size: 10px;
+  margin-top: 30px;
+}
+
+.popup-content {
+  text-align: center;
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 30px; /* Increase the font size */
+  padding: 10px; /* Add padding for better click area */
+}

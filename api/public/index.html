@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GHW Month</title>
+    <title>404's Wall</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="sky.css" />
     <link
@@ -61,7 +61,7 @@
         </div>
         <!-- <h1 class="title-main">Signature Wall!</h1> -->
         <div class="header-container">
-            <h1 class="signature-header">GHW: Career Week Wall</h1>
+            <h1 class="signature-header">404's Wall</h1>
         </div>
         <div class="button-container">
             <a href="message">
@@ -75,13 +75,40 @@
             </div>
         </div>
     </div>
-    <!-- <div class="footer-container" id="footer-container">
+    <div class="footer-container" id="footer-container">
         <div class="footer-content">
-            <p class="footer-text">Made with ❤️ by <a href="https://github.com/You-now-Who" class="linker">404_Not_Found</a>. Special
-                thanks to <a href="https://github.com/Malik-Legacy" class="linker">Void Burner</a>.</p>
+            <p class="footer-text">Made with ❤️ by <a href="https://github.com/You-now-Who" class="linker">404_Not_Found</a>.</p>
         </div>
-    </div> -->
+    </div>
+    <div id="welcome-popup" class="welcome-popup">
+        <div class="popup-content">
+            <span class="close-btn" id="close-popup">&times;</span>
+            <p>Ahoy, Stranger 👋<br><br> It seems like you've stumbled onto my wall. <br> <br>
+                I love reading the messages sent by friends over the internet :D <br> <br>
+                Feel free to leave your own message by clicking the button above. <br> <br>
+                Have a great day! 🌈<br><br>
+                - 404_Not_Found
+            </p>
+            <p class = "popup-footer">P.S. Please make my day by not sending inappropriate messages. Refresh the screen if the messages are not visible. You will only see this popup once.</p>
+        </div>
+    </div>
+
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const popup = document.getElementById('welcome-popup');
+            const closeBtn = document.getElementById('close-popup');
+
+            // Show welcome popup on first visit
+            if (!localStorage.getItem('visited')) {
+                popup.style.display = 'block';
+                localStorage.setItem('visited', 'true');
+            }
+
+            closeBtn.addEventListener('click', () => {
+                popup.style.display = 'none';
+            });
+        });
+
         fetch('/get_messages')
             .then(response => response.json())
             .then(data => {

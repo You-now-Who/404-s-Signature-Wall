@@ -66,8 +66,8 @@ app.get('/get_messages', async (req, res) => {
 });
 
 // Start the server
-// app.listen(port, () => {
-//     console.log(`Server running at port: ${port}/`);
-// });  
+app.listen(port, () => {
+    console.log(`Server running at port: ${port}/`);
+});  
 
 module.exports = app;
