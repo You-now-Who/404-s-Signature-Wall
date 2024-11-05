@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GHW Month</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="sky.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&family=Pacifico&family=Shadows+Into+Light&family=Satisfy&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+    <!-- Handwriting Set 1 -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat&family=Permanent+Marker&family=Kalam&family=Architects+Daughter&family=Covered+By+Your+Grace&family=Rock+Salt&family=Reenie+Beanie&family=Amatic+SC&family=Sacramento&family=Homemade+Apple&display=swap"
+        rel="stylesheet">
+
+    <!-- Handwriting Set 2 -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Waiting+for+the+Sunrise&family=Schoolbell&family=Just+Another+Hand&family=Kristi&family=Crafty+Girls&family=La+Belle+Aurore&family=Nothing+You+Could+Do&family=Mr+Dafoe&family=Allura&display=swap"
+        rel="stylesheet">
+
+    <!-- Handwriting Set 3 -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Yellowtail&family=Marck+Script&family=Rouge+Script&family=Petit+Formal+Script&family=Handlee&family=Patrick+Hand&family=Patrick+Hand+SC&family=Sedgwick+Ave&family=Butterfly+Kids&display=swap"
+        rel="stylesheet">
+
+    <!-- Handwriting Set 4 -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=Cherish&family=Hi+Melody&family=League+Script&family=Mrs+Saint+Delafield&family=Mr+De+Haviland&family=Meow+Script&family=Grape+Nuts&family=Ruthie&family=Cedarville+Cursive&display=swap"
+        rel="stylesheet">
+
+    <!-- Handwriting Set 5 -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Qwigley&family=WindSong&family=Inspiration&family=Lovers+Quarrel&family=Miss+Fajardose&family=Over+the+Rainbow&family=Swanky+and+Moo+Moo&family=Vibur&family=Zeyada&family=Stalemate&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-in">
+        <div id="background-wrap">
+            <div class="x1">
+                <div class="cloud"></div>
+            </div>
+
+            <div class="x2">
+                <div class="cloud"></div>
+            </div>
+
+            <div class="x3">
+                <div class="cloud"></div>
+            </div>
+
+            <div class="x4">
+                <div class="cloud"></div>
+            </div>
+
+            <div class="x5">
+                <div class="cloud"></div>
+            </div>
+        </div>
+        <!-- <h1 class="title-main">Signature Wall!</h1> -->
+        <div class="header-container">
+            <h1 class="signature-header">GHW: Career Week Wall</h1>
+        </div>
+        <div class="button-container">
+            <a href="message">
+                <button class="button-54" role="button">Leave your own message...</button>
+            </a>
+        </div>
+        <br /><br />
+        <div class="brick-wall" id="brick-row">
+            <div class="brick-flex" id="brick-flex">
+                <!-- The messages would be displayed here using flexbox -->
+            </div>
+        </div>
+    </div>
+    <!-- <div class="footer-container" id="footer-container">
+        <div class="footer-content">
+            <p class="footer-text">Made with ❤️ by <a href="https://github.com/You-now-Who" class="linker">404_Not_Found</a>. Special
+                thanks to <a href="https://github.com/Malik-Legacy" class="linker">Void Burner</a>.</p>
+        </div>
+    </div> -->
+    <script>
+        fetch('/get_messages')
+            .then(response => response.json())
+            .then(data => {
+                const names = data;
+                const messagesDiv = document.getElementById('brick-flex');
+                const rows = Math.ceil(names.length / 5);
+
+                document.getElementById("brick-row").style.height = `${rows * 200 + 200}px`;
+                
+                const footerElement= document.getElementById("footer-container");
+                footerElement.style.visibility = "visible";
+                footerElement.style.bottom = 0;
+                footerElement.style.right = 0;
+                footerElement.style.marginRight = "10px";
+                footerElement.style.position = "fixed";
+                
+                if (names.length === 0) {
+                    messagesDiv.innerHTML = '<p>No messages yet.</p>';
+                } else {
+                    for (let i = 0; i < rows; i++) {
+                        const row = document.createElement('div');
+                        row.classList.add('brick-row');
+                        messagesDiv.appendChild(row);
+                        for (let j = 0; j < 5 && (i * 5 + j) < names.length; j++) {
+                            const name = names[i * 5 + j];
+                            const messageElement = document.createElement('div');
+                            messageElement.classList.add('brick');
+                            messageElement.style.fontFamily = name.font;
+                            messageElement.innerHTML = `<span class="dot dot-top-left"></span>
+                                <span class="dot dot-top-right"></span>
+                                <span class="dot dot-bottom-left"></span>
+                                <span class="dot dot-bottom-right"></span>
+                                <h2 class="brick-text" style="font-family: ${name.font};">${name.name}</h2>`;
+                            const messageBubble = document.createElement('div');
+                            messageBubble.classList.add('message-bubble');
+                            messageBubble.innerText = name.message;
+                            messageElement.appendChild(messageBubble);
+
+                            messageElement.addEventListener('mouseover', () => {
+                                messageBubble.style.display = 'block';
+                            });
+
+                            messageElement.addEventListener('mouseout', () => {
+                                messageBubble.style.display = 'none';
+                            });
+                            row.appendChild(messageElement);
+                        }
+                    }
+                }
+            })
+    </script>
+</body>
+
+</html>

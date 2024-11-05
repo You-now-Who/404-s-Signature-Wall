@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "@supabase/supabase-js": "^2.46.1",
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "sqlite3": "^5.1.7"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+}
+
+}

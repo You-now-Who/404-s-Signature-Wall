@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave your message</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Indie+Flower&family=Pacifico&family=Shadows+Into+Light&family=Satisfy&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+    <!-- Handwriting Set 1 -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat&family=Permanent+Marker&family=Kalam&family=Architects+Daughter&family=Covered+By+Your+Grace&family=Rock+Salt&family=Reenie+Beanie&family=Amatic+SC&family=Sacramento&family=Homemade+Apple&display=swap"
+        rel="stylesheet">
+
+    <!-- Handwriting Set 2 -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Waiting+for+the+Sunrise&family=Schoolbell&family=Just+Another+Hand&family=Kristi&family=Crafty+Girls&family=La+Belle+Aurore&family=Nothing+You+Could+Do&family=Mr+Dafoe&family=Allura&display=swap"
+        rel="stylesheet">
+
+    <!-- Handwriting Set 3 -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Yellowtail&family=Marck+Script&family=Rouge+Script&family=Petit+Formal+Script&family=Handlee&family=Patrick+Hand&family=Patrick+Hand+SC&family=Sedgwick+Ave&family=Butterfly+Kids&display=swap"
+        rel="stylesheet">
+
+    <!-- Handwriting Set 4 -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Just+Me+Again+Down+Here&family=Cherish&family=Hi+Melody&family=League+Script&family=Mrs+Saint+Delafield&family=Mr+De+Haviland&family=Meow+Script&family=Grape+Nuts&family=Ruthie&family=Cedarville+Cursive&display=swap"
+        rel="stylesheet">
+
+    <!-- Handwriting Set 5 -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Qwigley&family=WindSong&family=Inspiration&family=Lovers+Quarrel&family=Miss+Fajardose&family=Over+the+Rainbow&family=Swanky+and+Moo+Moo&family=Vibur&family=Zeyada&family=Stalemate&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-bod">
+        <div class="main">
+            <h1>Leave a message...</h1>
+            <form action="/submit_note" method="post">
+                <label for="font">Choose a font:</label>
+                <select id="font" name="font">
+                    <option value="Dancing Script" style="font-family: 'Dancing Script', cursive;">Dancing Script
+                    </option>
+                    <option value="Indie Flower" style="font-family: 'Indie Flower', cursive;">Indie Flower</option>
+                    <option value="Pacifico" style="font-family: 'Pacifico', cursive;">Pacifico</option>
+                    <option value="Shadows Into Light" style="font-family: 'Shadows Into Light', cursive;">Shadows Into
+                        Light</option>
+                    <option value="Satisfy" style="font-family: 'Satisfy', cursive;">Satisfy</option>
+                    <option value="Great Vibes" style="font-family: 'Great Vibes', cursive;">Great Vibes</option>
+                    <option value="Arial" style="font-family: Arial, sans-serif;">Arial</option>
+                    <option value="Verdana" style="font-family: Verdana, sans-serif;">Verdana</option>
+                    <option value="Times New Roman" style="font-family: 'Times New Roman', serif;">Times New Roman
+                    </option>
+
+                    <!-- Handwriting & Decorative Fonts -->
+                    <option value="Bad Script" style="font-family: 'Bad Script', cursive;">Bad Script</option>
+                    <option value="Waiting for the Sunrise" style="font-family: 'Waiting for the Sunrise', cursive;">
+                        Waiting for the Sunrise</option>
+                    <option value="Schoolbell" style="font-family: 'Schoolbell', cursive;">Schoolbell</option>
+                    <option value="Just Another Hand" style="font-family: 'Just Another Hand', cursive;">Just Another
+                        Hand</option>
+                    <option value="Kristi" style="font-family: 'Kristi', cursive;">Kristi</option>
+                    <option value="Crafty Girls" style="font-family: 'Crafty Girls', cursive;">Crafty Girls</option>
+                    <option value="Dawning of a New Day" style="font-family: 'Dawning of a New Day', cursive;">Dawning
+                        of a New Day</option>
+                    <option value="La Belle Aurore" style="font-family: 'La Belle Aurore', cursive;">La Belle Aurore
+                    </option>
+                    <option value="Nothing You Could Do" style="font-family: 'Nothing You Could Do', cursive;">Nothing
+                        You Could Do</option>
+                    <option value="Mr Dafoe" style="font-family: 'Mr Dafoe', cursive;">Mr Dafoe</option>
+                    <option value="Allura" style="font-family: 'Allura', cursive;">Allura</option>
+                    <option value="Yellowtail" style="font-family: 'Yellowtail', cursive;">Yellowtail</option>
+                    <option value="Marck Script" style="font-family: 'Marck Script', cursive;">Marck Script</option>
+                    <option value="Rouge Script" style="font-family: 'Rouge Script', cursive;">Rouge Script</option>
+                    <option value="Petit Formal Script" style="font-family: 'Petit Formal Script', cursive;">Petit
+                        Formal Script</option>
+                    <option value="Handlee" style="font-family: 'Handlee', cursive;">Handlee</option>
+                    <option value="Patrick Hand" style="font-family: 'Patrick Hand', cursive;">Patrick Hand</option>
+                    <option value="Patrick Hand SC" style="font-family: 'Patrick Hand SC', cursive;">Patrick Hand SC
+                    </option>
+                    <option value="Sedgwick Ave" style="font-family: 'Sedgwick Ave', cursive;">Sedgwick Ave</option>
+                    <option value="Butterfly Kids" style="font-family: 'Butterfly Kids', cursive;">Butterfly Kids
+                    </option>
+                    <option value="Just Me Again Down Here" style="font-family: 'Just Me Again Down Here', cursive;">
+                        Just Me Again Down Here</option>
+                    <option value="Cherish" style="font-family: 'Cherish', cursive;">Cherish</option>
+                    <option value="Hi Melody" style="font-family: 'Hi Melody', cursive;">Hi Melody</option>
+                    <option value="League Script" style="font-family: 'League Script', cursive;">League Script</option>
+                    <option value="Mrs Saint Delafield" style="font-family: 'Mrs Saint Delafield', cursive;">Mrs Saint
+                        Delafield</option>
+                    <option value="Mr De Haviland" style="font-family: 'Mr De Haviland', cursive;">Mr De Haviland
+                    </option>
+                    <option value="Meow Script" style="font-family: 'Meow Script', cursive;">Meow Script</option>
+                    <option value="Grape Nuts" style="font-family: 'Grape Nuts', cursive;">Grape Nuts</option>
+
+                    <option value="Caveat" style="font-family: 'Caveat', cursive;">Caveat</option>
+                    <option value="Permanent Marker" style="font-family: 'Permanent Marker', cursive;">Permanent Marker
+                    </option>
+                    <option value="Kalam" style="font-family: 'Kalam', cursive;">Kalam</option>
+                    <option value="Architects Daughter" style="font-family: 'Architects Daughter', cursive;">Architects
+                        Daughter</option>
+                    <option value="Covered By Your Grace" style="font-family: 'Covered By Your Grace', cursive;">Covered
+                        By Your Grace</option>
+                    <option value="Rock Salt" style="font-family: 'Rock Salt', cursive;">Rock Salt</option>
+                    <option value="Reenie Beanie" style="font-family: 'Reenie Beanie', cursive;">Reenie Beanie</option>
+                    <option value="Amatic SC" style="font-family: 'Amatic SC', cursive;">Amatic SC</option>
+                    <option value="Sacramento" style="font-family: 'Sacramento', cursive;">Sacramento</option>
+                    <option value="Homemade Apple" style="font-family: 'Homemade Apple', cursive;">Homemade Apple
+                    </option>
+
+                    <!-- Modern Sans-Serif -->
+                    <option value="Roboto" style="font-family: 'Roboto', sans-serif;">Roboto</option>
+                    <option value="Open Sans" style="font-family: 'Open Sans', sans-serif;">Open Sans</option>
+                    <option value="Montserrat" style="font-family: 'Montserrat', sans-serif;">Montserrat</option>
+                    <option value="Lato" style="font-family: 'Lato', sans-serif;">Lato</option>
+                    <option value="Poppins" style="font-family: 'Poppins', sans-serif;">Poppins</option>
+                    <option value="Ubuntu" style="font-family: 'Ubuntu', sans-serif;">Ubuntu</option>
+                    <option value="Source Sans Pro" style="font-family: 'Source Sans Pro', sans-serif;">Source Sans Pro
+                    </option>
+                    <option value="Raleway" style="font-family: 'Raleway', sans-serif;">Raleway</option>
+                    <option value="Nunito" style="font-family: 'Nunito', sans-serif;">Nunito</option>
+                    <option value="Quicksand" style="font-family: 'Quicksand', sans-serif;">Quicksand</option>
+
+                    <!-- Serif Fonts -->
+                    <option value="Merriweather" style="font-family: 'Merriweather', serif;">Merriweather</option>
+                    <option value="Playfair Display" style="font-family: 'Playfair Display', serif;">Playfair Display
+                    </option>
+                    <option value="Lora" style="font-family: 'Lora', serif;">Lora</option>
+                    <option value="Crimson Text" style="font-family: 'Crimson Text', serif;">Crimson Text</option>
+                    <option value="Noto Serif" style="font-family: 'Noto Serif', serif;">Noto Serif</option>
+
+                    <!-- Display & Decorative -->
+                    <option value="Lobster" style="font-family: 'Lobster', cursive;">Lobster</option>
+                    <option value="Righteous" style="font-family: 'Righteous', cursive;">Righteous</option>
+                    <option value="Comfortaa" style="font-family: 'Comfortaa', cursive;">Comfortaa</option>
+                    <option value="Fredoka One" style="font-family: 'Fredoka One', cursive;">Fredoka One</option>
+                    <option value="Carter One" style="font-family: 'Carter One', cursive;">Carter One</option>
+                    <option value="Concert One" style="font-family: 'Concert One', cursive;">Concert One</option>
+                    <option value="Bangers" style="font-family: 'Bangers', cursive;">Bangers</option>
+                    <option value="Chewy" style="font-family: 'Chewy', cursive;">Chewy</option>
+                    <option value="Bungee" style="font-family: 'Bungee', cursive;">Bungee</option>
+                    <option value="Creepster" style="font-family: 'Creepster', cursive;">Creepster</option>
+
+                    <!-- Monospace -->
+                    <option value="Roboto Mono" style="font-family: 'Roboto Mono', monospace;">Roboto Mono</option>
+                    <option value="Source Code Pro" style="font-family: 'Source Code Pro', monospace;">Source Code Pro
+                    </option>
+                    <option value="Space Mono" style="font-family: 'Space Mono', monospace;">Space Mono</option>
+                    <option value="Ubuntu Mono" style="font-family: 'Ubuntu Mono', monospace;">Ubuntu Mono</option>
+                    <option value="Fira Mono" style="font-family: 'Fira Mono', monospace;">Fira Mono</option>
+
+                    <!-- Fun & Unique -->
+                    <option value="Press Start 2P" style="font-family: 'Press Start 2P', cursive;">Press Start 2P
+                    </option>
+                    <option value="VT323" style="font-family: 'VT323', monospace;">VT323</option>
+                    <option value="Abril Fatface" style="font-family: 'Abril Fatface', cursive;">Abril Fatface</option>
+                    <option value="Gloria Hallelujah" style="font-family: 'Gloria Hallelujah', cursive;">Gloria
+                        Hallelujah</option>
+                    <option value="Rubik Mono One" style="font-family: 'Rubik Mono One', sans-serif;">Rubik Mono One
+                    </option>
+                </select>
+                <br><br>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" maxlength="20" required>
+                <br><br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" cols="50" maxlength="150" required></textarea>
+                <br><br>
+                <input type="submit" value="Submit">
+            </form>
+            <div id="preview" style="border: 1px solid #ccc; padding: 10px; margin-top: 20px;"></div>
+        </div>
+    </div>
+    <script>
+        const fontSelect = document.getElementById('font');
+        const nameInput = document.getElementById('name');
+        const messageInput = document.getElementById('message');
+        const previewArea = document.getElementById('preview');
+
+        function updatePreview() {
+            previewArea.style.fontFamily = fontSelect.value;
+            previewArea.innerHTML = `<strong>${nameInput.value || "Your Name"}</strong><br>${messageInput.value || "Your Message"}`;
+        }
+        fontSelect.addEventListener('change', updatePreview);
+        nameInput.addEventListener('input', updatePreview);
+        messageInput.addEventListener('input', updatePreview);
+        // Initial preview update
+        updatePreview();
+    </script>
+</body>
+
+</html>
